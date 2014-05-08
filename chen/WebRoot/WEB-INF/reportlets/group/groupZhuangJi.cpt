@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WorkBook xmlVersion="20131111" releaseVersion="7.0.5">
+<TableDataMap>
+<TableData name="青海绿电集团" class="com.fr.data.impl.DBTableData">
+<Parameters/>
+<Attributes maxMemRowCount="-1"/>
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName>
+<![CDATA[huntoms]]></DatabaseName>
+</Connection>
+<Query>
+<![CDATA[select b.organ_name,b.capacity from b_organization  b where organ_id=1
+
+]]></Query>
+</TableData>
+<TableData name="德令哈分公司" class="com.fr.data.impl.DBTableData">
+<Parameters/>
+<Attributes maxMemRowCount="-1"/>
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName>
+<![CDATA[huntoms]]></DatabaseName>
+</Connection>
+<Query>
+<![CDATA[select b.organ_name, b.capacity from b_organization  b where organ_id=2]]></Query>
+</TableData>
+<TableData name="德令哈下属电站" class="com.fr.data.impl.DBTableData">
+<Parameters/>
+<Attributes maxMemRowCount="-1"/>
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName>
+<![CDATA[huntoms]]></DatabaseName>
+</Connection>
+<Query>
+<![CDATA[select b.organ_name,b.capacity from b_organization  b  where organ_Pid=2]]></Query>
+</TableData>
+<TableData name="格尔木分公司" class="com.fr.data.impl.DBTableData">
+<Parameters/>
+<Attributes maxMemRowCount="-1"/>
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName>
+<![CDATA[huntoms]]></DatabaseName>
+</Connection>
+<Query>
+<![CDATA[select b.organ_name,b.capacity from b_organization  b where organ_id=3]]></Query>
+</TableData>
+<TableData name="格尔木下属电站" class="com.fr.data.impl.DBTableData">
+<Parameters/>
+<Attributes maxMemRowCount="-1"/>
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName>
+<![CDATA[huntoms]]></DatabaseName>
+</Connection>
+<Query>
+<![CDATA[select b.organ_name,b.capacity from b_organization  b where organ_pid=3]]></Query>
+</TableData>
+<TableData name="海北分公司" class="com.fr.data.impl.DBTableData">
+<Parameters/>
+<Attributes maxMemRowCount="-1"/>
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName>
+<![CDATA[huntoms]]></DatabaseName>
+</Connection>
+<Query>
+<![CDATA[select b.organ_name,b.capacity from b_organization  b where organ_id=4]]></Query>
+</TableData>
+<TableData name="海北下属电站" class="com.fr.data.impl.DBTableData">
+<Parameters/>
+<Attributes maxMemRowCount="-1"/>
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName>
+<![CDATA[huntoms]]></DatabaseName>
+</Connection>
+<Query>
+<![CDATA[select b.organ_name,b.capacity from b_organization  b where organ_pid=4]]></Query>
+</TableData>
+<TableData name="海南分公司" class="com.fr.data.impl.DBTableData">
+<Parameters/>
+<Attributes maxMemRowCount="-1"/>
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName>
+<![CDATA[huntoms]]></DatabaseName>
+</Connection>
+<Query>
+<![CDATA[select b.organ_name,b.capacity from b_organization  b where organ_id=5]]></Query>
+</TableData>
+<TableData name="海南下属电站" class="com.fr.data.impl.DBTableData">
+<Parameters/>
+<Attributes maxMemRowCount="-1"/>
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName>
+<![CDATA[huntoms]]></DatabaseName>
+</Connection>
+<Query>
+<![CDATA[select b.organ_name,b.capacity from b_organization  b where organ_pid=5]]></Query>
+</TableData>
+<TableData name="厂家个数" class="com.fr.data.impl.DBTableData">
+<Parameters/>
+<Attributes maxMemRowCount="-1"/>
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName>
+<![CDATA[huntoms]]></DatabaseName>
+</Connection>
+<Query>
+<![CDATA[select count(*) from HUNTOMS."B_MANUFACTURER"]]></Query>
+</TableData>
+<TableData name="逆变器个数" class="com.fr.data.impl.DBTableData">
+<Parameters/>
+<Attributes maxMemRowCount="-1"/>
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName>
+<![CDATA[huntoms]]></DatabaseName>
+</Connection>
+<Query>
+<![CDATA[select count(*)  from b_device b where b.organ_id in(
+		select c.organ_id from b_Organization c where c.organ_pid=2) 
+	group by b.organ_id]]></Query>
+</TableData>
+</TableDataMap>
+<Report class="com.fr.report.worksheet.WorkSheet" name="sheet1">
+<ReportPageAttr>
+<HR/>
+<FR/>
+<HC/>
+<FC/>
+</ReportPageAttr>
+<RowHeight defaultValue="723900">
+<![CDATA[1181100,1152000,1152000,1008000,1008000,1008000,1008000,1008000,1008000,1008000,1008000,1008000,1152000,1152000,1152000,1152000,1152000,1152000,1152000,1152000,1152000,1152000,1152000,1152000,1152000,1152000,1152000,1152000,723900]]></RowHeight>
+<ColumnWidth defaultValue="2743200">
+<![CDATA[5105400,5638800,4762500,3810000,4000500,4038600,4991100,3312000,3312000,3312000,3312000,2743200]]></ColumnWidth>
+<CellElementList>
+<C c="0" r="0" cs="5" rs="2" s="0">
+<O>
+<![CDATA[集团装机统计报表]]></O>
+<Expand/>
+</C>
+<C c="0" r="2" s="1">
+<O>
+<![CDATA[机构名称]]></O>
+<Expand/>
+</C>
+<C c="1" r="2" s="1">
+<O>
+<![CDATA[计划装机容量 (MW)]]></O>
+<Expand/>
+</C>
+<C c="2" r="2" s="1">
+<O>
+<![CDATA[已投运容量 (MW)]]></O>
+<Expand/>
+</C>
+<C c="3" r="2" s="1">
+<O>
+<![CDATA[逆变器厂家(家)]]></O>
+<Expand/>
+</C>
+<C c="4" r="2" s="1">
+<O>
+<![CDATA[逆变器数量(台)]]></O>
+<Expand/>
+</C>
+<C c="0" r="3" s="2">
+<O t="DSColumn">
+<Attributes dsName="青海绿电集团" columnName="ORGAN_NAME"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<Expand dir="0"/>
+</C>
+<C c="1" r="3" s="3">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(b6+b8+b10+b12)]]></Attributes>
+</O>
+<Expand dir="0"/>
+</C>
+<C c="2" r="3" s="3">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(c6+c8+c10+c12)]]></Attributes>
+</O>
+<Expand dir="0"/>
+</C>
+<C c="3" r="3" s="3">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(d6+d8+d10+d12)]]></Attributes>
+</O>
+<Expand dir="0"/>
+</C>
+<C c="4" r="3" s="3">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(d6+d8+d10+d12)]]></Attributes>
+</O>
+<Expand dir="0"/>
+</C>
+<C c="6" r="3">
+<Expand/>
+</C>
+<C c="0" r="4" s="2">
+<O t="DSColumn">
+<Attributes dsName="德令哈分公司" columnName="ORGAN_NAME"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<Expand dir="0"/>
+</C>
+<C c="1" r="4" s="3">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(b6)]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="2" r="4" s="3">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(c6)]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="3" r="4" s="3">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(d6)]]></Attributes>
+</O>
+<Expand leftParentDefault="false" upParentDefault="false"/>
+</C>
+<C c="4" r="4" s="3">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(d6)]]></Attributes>
+</O>
+<Expand leftParentDefault="false" upParentDefault="false"/>
+</C>
+<C c="0" r="5" s="4">
+<O t="DSColumn">
+<Attributes dsName="德令哈下属电站" columnName="ORGAN_NAME"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<Expand dir="0"/>
+</C>
+<C c="1" r="5" s="5">
+<O t="DSColumn">
+<Attributes dsName="德令哈下属电站" columnName="CAPACITY"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<Expand dir="0" leftParentDefault="false" left="A6" upParentDefault="false"/>
+</C>
+<C c="2" r="5" s="5">
+<O t="DSColumn">
+<Attributes dsName="德令哈下属电站" columnName="CAPACITY"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<Expand dir="0" leftParentDefault="false" left="A6"/>
+</C>
+<C c="3" r="5" s="5">
+<O t="DSColumn">
+<Attributes dsName="厂家个数" columnName="COUNT(*)"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<Expand dir="0" leftParentDefault="false" left="A6" upParentDefault="false"/>
+</C>
+<C c="4" r="5" s="5">
+<O t="DSColumn">
+<Attributes dsName="厂家个数" columnName="COUNT(*)"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<Expand dir="0" leftParentDefault="false" left="A6" upParentDefault="false"/>
+</C>
+<C c="0" r="6" s="2">
+<O t="DSColumn">
+<Attributes dsName="格尔木分公司" columnName="ORGAN_NAME"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<Expand dir="0"/>
+</C>
+<C c="1" r="6" s="3">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(b8)]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="2" r="6" s="3">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(c8)]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="3" r="6" s="3">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(d8)]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="4" r="6" s="3">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(d8)]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="0" r="7" s="4">
+<O t="DSColumn">
+<Attributes dsName="格尔木下属电站" columnName="ORGAN_NAME"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<Expand dir="0"/>
+</C>
+<C c="1" r="7" s="5">
+<O t="DSColumn">
+<Attributes dsName="格尔木下属电站" columnName="CAPACITY"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<Expand dir="0"/>
+</C>
+<C c="2" r="7" s="5">
+<O t="DSColumn">
+<Attributes dsName="格尔木下属电站" columnName="CAPACITY"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<Expand dir="0"/>
+</C>
+<C c="3" r="7" s="5">
+<O t="DSColumn">
+<Attributes dsName="厂家个数" columnName="COUNT(*)"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<Expand dir="0"/>
+</C>
+<C c="4" r="7" s="5">
+<O t="DSColumn">
+<Attributes dsName="厂家个数" columnName="COUNT(*)"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<Expand dir="0"/>
+</C>
+<C c="0" r="8" s="2">
+<O t="DSColumn">
+<Attributes dsName="海北分公司" columnName="ORGAN_NAME"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<Expand dir="0"/>
+</C>
+<C c="1" r="8" s="3">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(b10)]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="2" r="8" s="3">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(c10)]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="3" r="8" s="3">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(d10)]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="4" r="8" s="3">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(d10)]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="0" r="9" s="4">
+<O t="DSColumn">
+<Attributes dsName="海北下属电站" columnName="ORGAN_NAME"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<Expand dir="0"/>
+</C>
+<C c="1" r="9" s="5">
+<O t="DSColumn">
+<Attributes dsName="海北下属电站" columnName="CAPACITY"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<Expand dir="0"/>
+</C>
+<C c="2" r="9" s="5">
+<O t="DSColumn">
+<Attributes dsName="海北下属电站" columnName="CAPACITY"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<Expand dir="0"/>
+</C>
+<C c="3" r="9" s="5">
+<O t="DSColumn">
+<Attributes dsName="厂家个数" columnName="COUNT(*)"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<Expand dir="0"/>
+</C>
+<C c="4" r="9" s="5">
+<O t="DSColumn">
+<Attributes dsName="厂家个数" columnName="COUNT(*)"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<Expand dir="0"/>
+</C>
+<C c="0" r="10" s="2">
+<O t="DSColumn">
+<Attributes dsName="海南分公司" columnName="ORGAN_NAME"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<Expand dir="0"/>
+</C>
+<C c="1" r="10" s="3">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(b12)]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="2" r="10" s="3">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(c12)]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="3" r="10" s="3">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(d12)]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="4" r="10" s="3">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(d12)]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="0" r="11" s="4">
+<O t="DSColumn">
+<Attributes dsName="海南下属电站" columnName="ORGAN_NAME"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<Expand dir="0"/>
+</C>
+<C c="1" r="11" s="5">
+<O t="DSColumn">
+<Attributes dsName="海南下属电站" columnName="CAPACITY"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<Expand dir="0"/>
+</C>
+<C c="2" r="11" s="5">
+<O t="DSColumn">
+<Attributes dsName="海南下属电站" columnName="CAPACITY"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<Expand dir="0"/>
+</C>
+<C c="3" r="11" s="5">
+<O t="DSColumn">
+<Attributes dsName="厂家个数" columnName="COUNT(*)"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<Expand dir="0"/>
+</C>
+<C c="4" r="11" s="5">
+<O t="DSColumn">
+<Attributes dsName="厂家个数" columnName="COUNT(*)"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<Expand dir="0"/>
+</C>
+</CellElementList>
+<ReportAttrSet>
+<ReportSettings headerHeight="0" footerHeight="0">
+<PaperSetting orientation="1">
+<Margin top="986400" left="2743200" bottom="986400" right="2743200"/>
+</PaperSetting>
+</ReportSettings>
+<Header reportPageType="0">
+<Background name="NullBackground"/>
+<LeftList/>
+<CenterList/>
+<RightList/>
+</Header>
+<Footer reportPageType="0">
+<Background name="NullBackground"/>
+<LeftList/>
+<CenterList/>
+<RightList/>
+</Footer>
+</ReportAttrSet>
+</Report>
+<ReportParameterAttr>
+<Attributes showWindow="true" delayPlaying="true" windowPosition="1" align="0"/>
+<PWTitle>
+<![CDATA[参数]]></PWTitle>
+</ReportParameterAttr>
+<StyleList>
+<Style horizontal_alignment="0" imageLayout="1">
+<FRFont name="SimSun" style="1" size="128"/>
+<Background name="ColorBackground" color="-1"/>
+<Border/>
+</Style>
+<Style horizontal_alignment="0" imageLayout="1">
+<FRFont name="SimSun" style="1" size="72"/>
+<Background name="ColorBackground" color="-4144960"/>
+<Border>
+<Top style="1" color="-16777216"/>
+<Bottom style="1" color="-16777216"/>
+<Left style="1" color="-16777216"/>
+<Right style="1" color="-16777216"/>
+</Border>
+</Style>
+<Style imageLayout="1">
+<FRFont name="SimSun" style="1" size="72"/>
+<Background name="ColorBackground" color="-16724737"/>
+<Border>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="1"/>
+<Right style="1"/>
+</Border>
+</Style>
+<Style horizontal_alignment="0" imageLayout="1">
+<FRFont name="SimSun" style="1" size="72"/>
+<Background name="ColorBackground" color="-16724737"/>
+<Border>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="1"/>
+<Right style="1"/>
+</Border>
+</Style>
+<Style imageLayout="1">
+<FRFont name="SimSun" style="0" size="72"/>
+<Background name="NullBackground"/>
+<Border>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="1"/>
+<Right style="1"/>
+</Border>
+</Style>
+<Style horizontal_alignment="0" imageLayout="1">
+<FRFont name="SimSun" style="0" size="72"/>
+<Background name="NullBackground"/>
+<Border>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="1"/>
+<Right style="1"/>
+</Border>
+</Style>
+</StyleList>
+<DesignerVersion DesignerVersion="HAF"/>
+<PreviewType PreviewType="1"/>
+</WorkBook>

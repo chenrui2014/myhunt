@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration PUBLIC "-//APACHE//DTD LOG4J 1.2//EN" "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+    <!-- Appenders -->
+    <appender name="console" class="org.apache.log4j.ConsoleAppender">
+        <param name="Target" value="System.out" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern"
+                value="[%d{yyyy/MM/dd HH:mm:ss}] [%c] [%-5p] %m%n" />
+        </layout>
+    </appender>
+    
+    <appender name="file"  
+        class="org.apache.log4j.RollingFileAppender">  
+        <param name="File" value="log/huntoms.log" />  
+        <param name="Append" value="true" />  
+        <param name="MaxFileSize" value="20MB" />  
+        <param name="MaxBackupIndex" value="10000" />  
+        <layout class="org.apache.log4j.PatternLayout">  
+            <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %-5p (%c:%L)- %m%n" />  
+        </layout>  
+    </appender>  
+  
+    <appender name="daily" class="org.apache.log4j.DailyRollingFileAppender">     
+        <param name="File" value="log/huntoms.log" />     
+        <param name="DatePattern" value="'huntims.'yyyy-MM-dd'.log'" />     
+        <layout class="org.apache.log4j.PatternLayout">     
+            <param name="ConversionPattern" value="[%d{yyyy-MM-dd HH:mm:ss\} %-5p] [%t] (%c:%L) - %m%n" />     
+        </layout>     
+    </appender>   
+
+    <!-- Application Loggers -->
+    <logger name="com.huntech.huntoms">
+        <level value="ERROR" />
+    </logger>
+
+    <!-- 3rdparty Loggers -->
+    <logger name="org.springframework.core">
+        <level value="ERROR" />
+    </logger>
+
+    <logger name="org.springframework.beans">
+        <level value="ERROR" />
+    </logger>
+
+    <logger name="org.springframework.context">
+        <level value="ERROR" />
+    </logger>
+
+    <logger name="org.springframework.web">
+        <level value="ERROR" />
+    </logger>
+
+    <logger name="org.springframework.web.servlet">
+        <level value="ERROR" />
+    </logger>
+    
+    <logger name="org.springframework.orm.jpa.support">
+        <level value="ERROR" />
+    </logger>
+
+    <logger name="org.hibernate.SQL">
+        <level value="debug" />
+    </logger>
+
+    <logger name="org.hibernate.jdbc">
+        <level value="ERROR" />
+    </logger>
+
+    <logger name="org.hibernate.transaction">
+        <level value="ERROR" />
+    </logger>
+
+    <logger name="org.hibernate.tool">
+        <level value="warn" />
+    </logger>
+
+    <logger name="jdbc.sqltiming">
+        <level value="warn" />
+    </logger>
+
+    <logger name="jdbc.sqlonly">
+        <level value="warn" />
+    </logger>
+
+    <!-- Root Logger -->
+    <root>
+        <priority value="warn" />
+        <appender-ref ref="console" />
+        <appender-ref ref="daily" />
+    </root>
+</log4j:configuration>

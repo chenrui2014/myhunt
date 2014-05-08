@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DatasourceManager xmlVersion="20131111" releaseVersion="7.0.5">
+	<ConnectionMap>
+		<Connection name="huntoms" class="com.fr.data.impl.JDBCDatabaseConnection">
+			<DatabaseAttr/>
+			<JDBCDatabaseAttr url="jdbc:oracle:thin:@192.168.7.220:1521:cev" driver="oracle.jdbc.driver.OracleDriver" user="huntoms" password="___007b003b0064007b000b00b80058" encryptPassword="true">
+				<DBCPAttr/>
+			</JDBCDatabaseAttr>
+		</Connection>
+	</ConnectionMap>
+	<TableDataMap>
+	</TableDataMap>
+	<ADHOCMap>
+		
+	</ADHOCMap>
+</DatasourceManager>

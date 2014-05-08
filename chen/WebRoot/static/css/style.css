@@ -1,0 +1,211 @@
+
+img {
+	border: none;
+}
+.he100 {
+        position:absolute;
+        height:100%;
+}
+
+/* dock - top */
+.dock {
+	position: relative; 
+	height: 62px; 
+	/*background: url(images/dock-bg2.gif) #FFFFFF;
+	border-left:3px #BFE0F8 solid;
+	border-right:3px #71A8D3 solid;*/
+	text-align: center;
+}
+.dock-container {
+	position: absolute;
+	height: 52px;
+	/*background: url(images/dock-bg2.gif);*/
+	padding-left: 20px;
+
+}
+.dock-item {
+	position: absolute;
+
+}
+a.dock-item {
+	display: block;
+	width: 40px;
+	color: #000;
+	position: absolute;
+	top: 0px;
+	text-align: center;
+	text-decoration: none;
+	font: bold 12px Arial, Helvetica, sans-serif;
+}
+.dock-item img {
+	border: none; 
+	margin: 5px 10px 0px 0px; 
+	width: 100%; 
+}
+.dock-item span {
+	display: none; 
+	position: absolute;
+	width: 80px;
+	color:#FFFFFF;
+	margin:-28px 0px 0px 0px;
+	padding:5px;
+	z-index:100;
+	font-size:16px;
+	background: url(images/alt_bg.gif);
+	filter:Alpha(opacity=60);-moz-opacity:0.6;
+}
+
+/* dock2 - bottom */
+#dock2 {
+	width: 100%;
+	bottom: 0px;
+	position: absolute;
+	left: 0px;
+}
+.dock-container2 {
+	position: absolute;
+	height: 50px;
+	/*background: url(images/dock-bg.gif);*/
+	padding-left: 20px;
+}
+a.dock-item2 {
+	display: block; 
+	font: bold 12px Arial, Helvetica, sans-serif;
+	width: 40px; 
+	color: #000; 
+	bottom: 0px; 
+	position: absolute;
+	text-align: center;
+	text-decoration: none;
+}
+.dock-item2 span {
+	display: none;
+	padding-left: 20px;
+}
+.dock-item2 img {
+	border: none; 
+	margin: 5px 10px 0px; 
+	width: 100%; 
+}
+
+
+/* set up the overall width of the menu div, the font and the margins with a relative position*/
+.menu 
+{width:206px; padding:0px;  position:relative;z-index:100; font-size:12px;}
+
+/* remove the bullets and set the margin and padding to zero for the unordered list */
+.menu ul 
+{padding:0; margin:0; list-style-type: none; border:0;width:200px;}
+
+/* float the list so that the items are in a line */
+.menu ul li 
+{float:left; position:relative; margin-right:1px;width:206px;font-size:12px}
+
+/* style the links to be 150px wide by 25px high. Set the background color and the font size. */
+.menu ul li a, 
+.menu ul li a:visited 
+{display:block; text-align:left; text-decoration:none; width:206px; height:25px; color:#aaa; background:url(images/tab.gif); line-height:24px; font-size:1spx; text-indent:10px;}
+
+
+
+
+
+/* Get rid of any default table style */
+table {border-collapse:collapse;margin:0; padding:0;}
+
+/* make the dropdown ul invisible */
+.menu ul li ul {display:none; text-align:left; position:absolute; top:25px; left:-20px; text-align:left;z-index:100; padding:0 30px 20px 20px; background:url(images/tab_bot.gif) 20px 100% no-repeat;}
+
+/* set the foreground color of the main menu li on hover and the border to trigger IE */
+.menu ul li:hover a, 
+.menu ul li a:hover
+{color:#fff; border:0;}
+
+/* make the sub menu ul visible and position it beneath the first list item */
+.menu ul li:hover ul, 
+.menu ul li a:hover ul
+{display:block;}
+
+/* make the sub menu ul li the full width with padding and border. Add an auto scroll bar */
+.menu ul li:hover ul li, 
+.menu ul li a:hover ul li
+{color:#000; width:202px; height:200px;overflow-y:auto;overflow-x:hide;  border-left:1px solid #7a7a7a; }
+/* hack the widht for IE5.5 */
+* html .menu ul li a:hover ul li {width:206px; w\idth:206px;}
+
+/* style the background and foreground color of the submenu links */
+.menu ul li:hover ul li a, 
+.menu ul li a:hover ul li a
+{float:left; display:block; background:#56636B; color:#aaa; width:185px; text-align:left; text-decoration:none; border:0; text-indent:10px;
+}
+
+/* style the background and forground colors of the links on hover */
+.menu ul li:hover ul li a:hover,
+.menu ul li a:hover ul li a:hover
+{text-decoration:none; color:#fff; background:#333;font-size:14px;}
+
+
+.menu1 
+{width:206px; padding:0px; position:relative;z-index:100; font-size:12px;}
+
+/* remove the bullets and set the margin and padding to zero for the unordered list */
+.menu1 ul 
+{padding:0; margin:0; list-style-type: none; border:0;width:200px;}
+
+/* float the list so that the items are in a line */
+.menu1 ul li 
+{float:left; position:relative; margin-right:1px;width:206px;font-size:12px}
+
+/* style the links to be 150px wide by 25px high. Set the background color and the font size. */
+.menu1 ul li a, 
+.menu1 ul li a:visited 
+{display:block; text-align:left; text-decoration:none; width:206px; height:25px; color:#aaa; background:url(images/tab1.png); line-height:24px; font-size:1spx; text-indent:10px;}
+
+
+/* make the dropdown ul invisible */
+.menu1 ul li ul {display:none; text-align:left; position:absolute; top:25px; left:-20px; text-align:left;z-index:100; padding:0 30px 20px 20px; background:url(images/tab_bot1.gif) 20px 100% no-repeat;}
+
+/* set the foreground color of the main menu li on hover and the border to trigger IE */
+.menu1 ul li:hover a, 
+.menu1 ul li a:hover
+{color:#fff; border:0;}
+
+/* make the sub menu ul visible and position it beneath the first list item */
+.menu1 ul li:hover ul, 
+.menu1 ul li a:hover ul
+{display:block;}
+
+/* make the sub menu ul li the full width with padding and border. Add an auto scroll bar */
+.menu1 ul li:hover ul li, 
+.menu1 ul li a:hover ul li
+{color:#000; width:202px; height:200px;overflow-y:auto;overflow-x:hide;  border-left:1px solid #7a7a7a; }
+/* hack the widht for IE5.5 */
+* html .menu1 ul li a:hover ul li {width:206px; w\idth:206px;}
+
+/* style the background and foreground color of the submenu links */
+.menu1 ul li:hover ul li a, 
+.menu1 ul li a:hover ul li a
+{float:left; display:block; background:#2E353A; color:#aaa; width:185px; text-align:left; text-decoration:none; border:0; text-indent:10px;
+}
+
+/* style the background and forground colors of the links on hover */
+.menu1 ul li:hover ul li a:hover,
+.menu1 ul li a:hover ul li a:hover
+{text-decoration:none; color:#fff; background:#000;font-size:14px;}
+<!--[if lt IE 7]>
+
+.menu ul li ul {display:block; visibility:hidden;}
+.menu ul li a:hover ul {visibility:visible;}
+
+
+.menu ul li:hover ul li,
+.menu ul li a:hover ul li
+{
+scrollbar-arrow-color: #aaa;
+scrollbar-3dlight-color: #888;
+scrollbar-highlight-color: #666;
+scrollbar-face-color: #444;
+scrollbar-shadow-color: #000;
+scrollbar-darkshadow-color: #888;
+scrollbar-track-color: #363636;
+}

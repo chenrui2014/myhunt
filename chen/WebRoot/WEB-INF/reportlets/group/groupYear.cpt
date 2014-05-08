@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WorkBook xmlVersion="20131111" releaseVersion="7.0.5">
+<TableDataMap>
+<TableData name="ds1" class="com.fr.data.impl.DBTableData">
+<Parameters>
+<Parameter>
+<Attributes name="a"/>
+<O>
+<![CDATA[2013]]></O>
+</Parameter>
+</Parameters>
+<Attributes maxMemRowCount="-1"/>
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName>
+<![CDATA[huntoms]]></DatabaseName>
+</Connection>
+<Query>
+<![CDATA[ select * from group_e where year_='${a}']]></Query>
+</TableData>
+</TableDataMap>
+<Report class="com.fr.report.worksheet.WorkSheet" name="sheet1">
+<ReportPageAttr>
+<HR/>
+<FR/>
+<HC/>
+<FC/>
+</ReportPageAttr>
+<RowHeight defaultValue="723900">
+<![CDATA[1440000,1152000,1152000,1008000,1008000,1008000,864000,723900,723900,723900,723900]]></RowHeight>
+<ColumnWidth defaultValue="2743200">
+<![CDATA[2057400,2743200,3429000,3924300,3429000,3505200,3924300,3657600,3352800,3657600,4038600,3390900,3086100,3086100,2743200,2933700,2743200,3048000,2743200]]></ColumnWidth>
+<CellElementList>
+<C c="0" r="0" cs="18" s="0">
+<O>
+<![CDATA[集团电量统计年报表]]></O>
+<Expand/>
+</C>
+<C c="0" r="1" rs="2" s="1">
+<O>
+<![CDATA[ 月 份]]></O>
+<Expand/>
+</C>
+<C c="1" r="1" cs="2" s="1">
+<O>
+<![CDATA[电 站 建 设]]></O>
+<Expand/>
+</C>
+<C c="3" r="1" cs="6" s="1">
+<O>
+<![CDATA[电 量 指 标]]></O>
+<Expand/>
+</C>
+<C c="9" r="1" cs="5" s="1">
+<O>
+<![CDATA[效 率 指 标]]></O>
+<Expand/>
+</C>
+<C c="14" r="1" cs="4" s="1">
+<O>
+<![CDATA[能 耗 指 标]]></O>
+<Expand/>
+</C>
+<C c="1" r="2" s="1">
+<O>
+<![CDATA[投运电站数]]></O>
+<Expand/>
+</C>
+<C c="2" r="2" s="1">
+<O>
+<![CDATA[投运装机容量（兆瓦）]]></O>
+<Expand/>
+</C>
+<C c="3" r="2" s="1">
+<O>
+<![CDATA[理论发电量(kw/h)]]></O>
+<Expand/>
+</C>
+<C c="4" r="2" s="1">
+<O>
+<![CDATA[计划发电量(kw/h)]]></O>
+<Expand/>
+</C>
+<C c="5" r="2" s="1">
+<O>
+<![CDATA[实际发电量(kw/h)]]></O>
+<Expand/>
+</C>
+<C c="6" r="2" s="1">
+<O>
+<![CDATA[计划上网电量(kw/h)]]></O>
+<Expand/>
+</C>
+<C c="7" r="2" s="1">
+<O>
+<![CDATA[上网电量(kw/h)]]></O>
+<Expand/>
+</C>
+<C c="8" r="2" s="1">
+<O>
+<![CDATA[弃光电量(kw/h)]]></O>
+<Expand/>
+</C>
+<C c="9" r="2" s="1">
+<O>
+<![CDATA[  发电效率   （%）]]></O>
+<Expand/>
+</C>
+<C c="10" r="2" s="1">
+<O>
+<![CDATA[发电计划完成率 （%）]]></O>
+<Expand/>
+</C>
+<C c="11" r="2" s="1">
+<O>
+<![CDATA[上网计划完成率 （%）]]></O>
+<Expand/>
+</C>
+<C c="12" r="2" s="1">
+<O>
+<![CDATA[单兆瓦发电量(kw/h)]]></O>
+<Expand/>
+</C>
+<C c="13" r="2" s="1">
+<O>
+<![CDATA[等效利用小时（h）]]></O>
+<Expand/>
+</C>
+<C c="14" r="2" s="1">
+<O>
+<![CDATA[厂用电量(kw/h)]]></O>
+<Expand/>
+</C>
+<C c="15" r="2" s="1">
+<O>
+<![CDATA[  厂用电率 （%）]]></O>
+<Expand/>
+</C>
+<C c="16" r="2" s="1">
+<O>
+<![CDATA[综合厂用电量]]></O>
+<Expand/>
+</C>
+<C c="17" r="2" s="1">
+<O>
+<![CDATA[综合厂用电率 （%）]]></O>
+<Expand/>
+</C>
+<C c="0" r="3" s="2">
+<O t="DSColumn">
+<Attributes dsName="ds1" columnName="MONTH_"/>
+<Condition class="com.fr.data.condition.ListCondition"/>
+<Complex order="1"/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Result>
+<![CDATA[$$$]]></Result>
+<Parameters/>
+</O>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[row()%2==1]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.BackgroundHighlightAction">
+<Scope val="1"/>
+<Background name="ColorBackground" color="-6697729"/>
+</HighlightAction>
+</Highlight>
+</HighlightList>
+<Expand dir="0"/>
+</C>
+<C c="1" r="3" s="3">
+<Expand/>
+</C>
+<C c="2" r="3" s="2">
+<O t="DSColumn">
+<Attributes dsName="ds1" columnName="SUM(FACT_INSTALL)"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<Expand dir="0" leftParentDefault="false" left="A4" upParentDefault="false"/>
+</C>
+<C c="3" r="3" s="4">
+<O t="DSColumn">
+<Attributes dsName="ds1" columnName="THEORYE"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<Expand dir="0"/>
+</C>
+<C c="4" r="3" s="4">
+<O t="DSColumn">
+<Attributes dsName="ds1" columnName="PLAN_E"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<Expand dir="0"/>
+</C>
+<C c="5" r="3" s="4">
+<O t="DSColumn">
+<Attributes dsName="ds1" columnName="E"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<Expand dir="0"/>
+</C>
+<C c="6" r="3" s="4">
+<O t="DSColumn">
+<Attributes dsName="ds1" columnName="PLAN_ONE"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<Expand dir="0"/>
+</C>
+<C c="7" r="3" s="4">
+<O t="DSColumn">
+<Attributes dsName="ds1" columnName="ONNETE"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<Expand dir="0"/>
+</C>
+<C c="8" r="3" s="4">
+<O t="DSColumn">
+<Attributes dsName="ds1" columnName="LOSSE"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<Expand dir="0"/>
+</C>
+<C c="9" r="3" s="5">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=F4 / D4]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="10" r="3" s="5">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=F4 / E4]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="11" r="3" s="5">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=H4 / G4]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="12" r="3" s="3">
+<O t="DSColumn">
+<Attributes dsName="ds1" columnName="SINGLEMWE"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<Expand dir="0"/>
+</C>
+<C c="13" r="3" s="3">
+<O t="DSColumn">
+<Attributes dsName="ds1" columnName="EUSEHOURS"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<Expand dir="0"/>
+</C>
+<C c="14" r="3" s="4">
+<O t="DSColumn">
+<Attributes dsName="ds1" columnName="FACTORYE"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<Expand dir="0"/>
+</C>
+<C c="15" r="3" s="6">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=(F4 - H4) / F4]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="16" r="3" s="3">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=(E4 + 4000 - H4)]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="17" r="3" s="5">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=(E4 + 4000 - H4) / E4]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="0" r="4" s="7">
+<O>
+<![CDATA[月平均]]></O>
+<Expand/>
+</C>
+<C c="1" r="4" s="8">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(B4) / 12]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="2" r="4" s="8">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(C4) / 12]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="3" r="4" s="9">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(D4) / 12]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="4" r="4" s="9">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(E4) / 12]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="5" r="4" s="9">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(F4) / 12]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="6" r="4" s="9">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(G4) / 12]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="7" r="4" s="9">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(H4) / 12]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="8" r="4" s="9">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(I4) / 12]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="9" r="4" s="10">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(J4) / 12]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="10" r="4" s="10">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(K4) / 12]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="11" r="4" s="10">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(L4) / 12]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="12" r="4" s="9">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(M4) / 12]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="13" r="4" s="9">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(N4) / 12]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="14" r="4" s="9">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(O4) / 12]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="15" r="4" s="10">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(P4) / 12]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="16" r="4" s="9">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(Q4) / 12]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="17" r="4" s="10">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(R4) / 12]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="0" r="5" s="7">
+<O>
+<![CDATA[年合计]]></O>
+<Expand/>
+</C>
+<C c="1" r="5" s="8">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(B4)]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="2" r="5" s="8">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(C4)]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="3" r="5" s="9">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(D4)]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="4" r="5" s="9">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(E4)]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="5" r="5" s="9">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(F4)]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="6" r="5" s="9">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(G4)]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="7" r="5" s="9">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(H4)]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="8" r="5" s="9">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(I4)]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="9" r="5" s="10">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(J4)]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="10" r="5" s="10">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(K4)]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="11" r="5" s="10">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(L4)]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="12" r="5" s="9">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(M4)]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="13" r="5" s="9">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(N4)]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="14" r="5" s="9">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(O4)]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="15" r="5" s="10">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(P4)]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="16" r="5" s="9">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(Q4)]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="17" r="5" s="10">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=SUM(R4)]]></Attributes>
+</O>
+<Expand/>
+</C>
+<C c="0" r="6">
+<O>
+<![CDATA[制表人]]></O>
+<Expand/>
+</C>
+<C c="1" r="6">
+<Expand/>
+</C>
+<C c="2" r="6">
+<Expand/>
+</C>
+<C c="4" r="6">
+<Expand/>
+</C>
+<C c="5" r="6">
+<Expand/>
+</C>
+<C c="6" r="6">
+<Expand/>
+</C>
+<C c="7" r="6">
+<O>
+<![CDATA[制表时间]]></O>
+<Expand/>
+</C>
+<C c="8" r="6">
+<Expand/>
+</C>
+<C c="9" r="6">
+<Expand/>
+</C>
+<C c="10" r="6">
+<Expand/>
+</C>
+<C c="11" r="6">
+<Expand/>
+</C>
+<C c="12" r="6">
+<Expand/>
+</C>
+<C c="13" r="6">
+<Expand/>
+</C>
+<C c="14" r="6">
+<Expand/>
+</C>
+<C c="15" r="6">
+<O>
+<![CDATA[审核人]]></O>
+<Expand/>
+</C>
+<C c="16" r="6">
+<Expand/>
+</C>
+<C c="17" r="6">
+<Expand/>
+</C>
+</CellElementList>
+<ReportAttrSet>
+<ReportSettings headerHeight="0" footerHeight="0">
+<PaperSetting orientation="1">
+<PaperSize width="50832000" height="66240000"/>
+<Margin top="986400" left="2743200" bottom="986400" right="2743200"/>
+</PaperSetting>
+</ReportSettings>
+<Header reportPageType="0">
+<Background name="NullBackground"/>
+<LeftList/>
+<CenterList/>
+<RightList/>
+</Header>
+<Footer reportPageType="0">
+<Background name="NullBackground"/>
+<LeftList/>
+<CenterList/>
+<RightList/>
+</Footer>
+</ReportAttrSet>
+</Report>
+<ReportParameterAttr>
+<Attributes showWindow="true" delayPlaying="true" windowPosition="1" align="0"/>
+<PWTitle>
+<![CDATA[参数]]></PWTitle>
+<ParameterUI class="com.fr.form.main.parameter.FormParameterUI">
+<Layout class="com.fr.form.ui.container.WAbsoluteLayout">
+<WidgetName name="para"/>
+<WidgetAttr/>
+<Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
+<InnerWidget class="com.fr.form.ui.Label">
+<WidgetName name="Labela"/>
+<WidgetAttr/>
+<LabelAttr verticalcenter="true" textalign="0" autoline="true"/>
+<FRFont name="SimSun" style="0" size="72"/>
+<widgetValue>
+<O>
+<![CDATA[年 份]]></O>
+</widgetValue>
+</InnerWidget>
+<BoundsAttr x="74" y="16" width="56" height="30"/>
+</Widget>
+<Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
+<InnerWidget class="com.fr.form.ui.ComboBox">
+<WidgetName name="a"/>
+<WidgetAttr/>
+<Dictionary class="com.fr.data.impl.DatabaseDictionary">
+<FormulaDictAttr kiName="YEAR_" viName="YEAR_"/>
+<DBDictAttr tableName="GROUP_E" schemaName="HUNTOMS" ki="-1" vi="-1" kiName="YEAR_" viName="YEAR_"/>
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName>
+<![CDATA[huntoms]]></DatabaseName>
+</Connection>
+</Dictionary>
+<widgetValue>
+<O>
+<![CDATA[2013]]></O>
+</widgetValue>
+</InnerWidget>
+<BoundsAttr x="130" y="16" width="119" height="30"/>
+</Widget>
+<Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
+<InnerWidget class="com.fr.form.parameter.FormSubmitButton">
+<WidgetName name="Search"/>
+<WidgetAttr/>
+<Text>
+<![CDATA[查询]]></Text>
+<Hotkeys>
+<![CDATA[enter]]></Hotkeys>
+</InnerWidget>
+<BoundsAttr x="319" y="16" width="80" height="30"/>
+</Widget>
+<LCAttr vgap="0" hgap="0"/>
+</Layout>
+<DesignAttr width="1000" height="51"/>
+</ParameterUI>
+</ReportParameterAttr>
+<StyleList>
+<Style horizontal_alignment="0" imageLayout="1">
+<FRFont name="SimSun" style="1" size="128"/>
+<Background name="ColorBackground" color="-1"/>
+<Border/>
+</Style>
+<Style horizontal_alignment="0" imageLayout="1">
+<FRFont name="SimSun" style="1" size="72"/>
+<Background name="ColorBackground" color="-4144960"/>
+<Border>
+<Top style="1" color="-16777216"/>
+<Bottom style="1" color="-16777216"/>
+<Left style="1" color="-16777216"/>
+<Right style="1" color="-16777216"/>
+</Border>
+</Style>
+<Style horizontal_alignment="0" imageLayout="1">
+<FRFont name="SimSun" style="0" size="72"/>
+<Background name="NullBackground"/>
+<Border>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="1"/>
+<Right style="1"/>
+</Border>
+</Style>
+<Style imageLayout="1">
+<FRFont name="SimSun" style="0" size="72"/>
+<Background name="NullBackground"/>
+<Border>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="1"/>
+<Right style="1"/>
+</Border>
+</Style>
+<Style imageLayout="1">
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#0.00]]></Format>
+<FRFont name="SimSun" style="0" size="72"/>
+<Background name="NullBackground"/>
+<Border>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="1"/>
+<Right style="1"/>
+</Border>
+</Style>
+<Style imageLayout="1">
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#0.00%]]></Format>
+<FRFont name="SimSun" style="0" size="72"/>
+<Background name="NullBackground"/>
+<Border>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="1"/>
+<Right style="1"/>
+</Border>
+</Style>
+<Style imageLayout="1">
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#0%]]></Format>
+<FRFont name="SimSun" style="0" size="72"/>
+<Background name="NullBackground"/>
+<Border>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="1"/>
+<Right style="1"/>
+</Border>
+</Style>
+<Style imageLayout="1">
+<FRFont name="SimSun" style="1" size="72"/>
+<Background name="ColorBackground" color="-4144960"/>
+<Border>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="1"/>
+<Right style="1"/>
+</Border>
+</Style>
+<Style horizontal_alignment="0" imageLayout="1">
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#0.00]]></Format>
+<FRFont name="SimSun" style="0" size="72"/>
+<Background name="ColorBackground" color="-4144960"/>
+<Border>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="1"/>
+<Right style="1"/>
+</Border>
+</Style>
+<Style imageLayout="1">
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#0.00]]></Format>
+<FRFont name="SimSun" style="0" size="72"/>
+<Background name="ColorBackground" color="-4144960"/>
+<Border>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="1"/>
+<Right style="1"/>
+</Border>
+</Style>
+<Style imageLayout="1">
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#0.00%]]></Format>
+<FRFont name="SimSun" style="0" size="72"/>
+<Background name="ColorBackground" color="-4144960"/>
+<Border>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="1"/>
+<Right style="1"/>
+</Border>
+</Style>
+</StyleList>
+<DesignerVersion DesignerVersion="HAF"/>
+<PreviewType PreviewType="0"/>
+</WorkBook>
